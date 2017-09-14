@@ -164,7 +164,38 @@ function newChallenge(){
 
 function createChallenge(){
 
-    
+    var newChallengeObject={
+        "name":"",
+        "players":[],
+        "table":"",
+        "playedMatches":"",
+        "match":{
+            "player1":"",
+            "player2":""
+        }
+    }
+    var value=$('#challengeNameEntry').val();
+
+    console.log($('#playersAddField').children());
+
+    var playersData=[];
+    var inputs=$('#playersAddField').children();
+    console.log(inputs);
+    var fieldLength=$('#playersAddField').children().length;
+    console.log("Field Length",fieldLength);
+    var elements=fieldLength/2;
+    console.log("elements",elements);
+    for(i=0;i<elements;i++)
+    {
+
+        playersData.push($('#'+(i+1)+'_name').val())
+        playersData.push($('#'+(i+1)+'_defeats').val())
+        console.log(i);
+
+    }
+
+    console.log(value);
+    console.log(playersData);
 
 }
 
