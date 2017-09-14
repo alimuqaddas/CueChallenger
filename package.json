@@ -1,0 +1,30 @@
+{
+  "name": "cuestoke",
+  "version": "1.0.0",
+  "description": "Cue Stoke",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/alimuqaddas/CueStoke",
+  "keywords": [
+    "CueStoke",
+    "poolchallenger",
+    "snookerTournament"
+  ],
+  "author": "Ali Muqaddas",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.6.2",
+    "electron-rebuild": "^1.6.0"
+  },
+  "dependencies": {
+    "array-shuffle": "^1.0.1",
+    "combinations": "^0.1.1",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "jsonfile": "^4.0.0",
+    "random-number-generator": "^1.0.2",
+    "shuffle-array": "^1.0.1"
+  }
+}

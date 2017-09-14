@@ -1,0 +1,18 @@
+.unselected
+{
+    color:red;
+    cursor:pointer;
+}
+.unselected:hover
+{
+    color:blue;
+}
+.selected
+{
+    color:green;
+    cursor:pointer;
+}
+.selected:hover
+{
+    color:blue;
+}

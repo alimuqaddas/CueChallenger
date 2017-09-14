@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CueChallenger</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="logo">
+      <h1>CueChallenger</h1>
+    </div>
+
+
+  <div id="home">
+
+    <table id="challengesTable">
+      <thead>
+        <tr>
+          <th>Challenge Name</th>
+          <th>Table</th> 
+          <th>Played Matches</th>
+        </tr>
+      </thead>
+      <tbody style="cursor:pointer;" id="challengesBody">
+
+      </tbody>
+    </table>
+
+    <button onclick="newChallenge()">New Challenge</button>
+
+    </div>
+
+   <!-- Challenge Profile -->
+
+   <div id="challengeProfile" style="display:none;">
+
+    <div id="top-bar">
+      <h1 id="challengeName"></h1>
+      <p id="table"></p>
+    </div>
+
+    <table>
+      <thead>
+        <th>Player Name</th>
+        <th>Available Losses</th>
+        <th>Wins</th>
+      </thead>
+      <tbody id="challengeDetails">
+         
+      </tbody>
+
+    </table>
+
+    <div id="currentMatch">
+        <div id="player1" class="unselected"></div>
+        <div id="player2" class="unselected"></div>
+    </div>
+    <div id="UpdateMatch">
+      <button onclick="submitmatchResult()">Update</button>
+    </div>
+
+   </div>
+
+   <div id="createChallenge" style="display:none;">
+
+
+    <button onclick="addPlayer()">Add Player</button>
+    <button onclick="removePlayer()">Remove Player</button>
+    <input type="text" id="challengeName"style="display:block" placeholder="Challenge Name"/>
+    <div id="playersAddField">
+      <input type="text" id="1_name"style="display:inline-block" placeholder="Player Name"/>
+      <input type="text" id="1_defeats" style="display:inline-block" placeholder="Allowed Defeats"/>
+    </div>
+    <button onclick="createChallenge()">Create</button>
+   </div>
+   
+
+   <div id="navigation">
+      <button onclick="gohome()">HOME</button>
+    </div>
+  </body>
+  <script>window.$ = window.jQuery = require('jquery','jquery-ui');</script>
+  
+
+  <script src="getdata.js"></script>
+  <script src="helpingfunctions.js"></script>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>
