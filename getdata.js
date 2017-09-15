@@ -174,7 +174,12 @@ function createChallenge(){
             "player2":""
         }
     }
-    var value=$('#challengeNameEntry').val();
+
+    var player = {
+        name:"",
+        allowedLosses:"",
+        wins:0
+    }
 
     console.log($('#playersAddField').children());
 
@@ -190,12 +195,21 @@ function createChallenge(){
 
         playersData.push($('#'+(i+1)+'_name').val())
         playersData.push($('#'+(i+1)+'_defeats').val())
+        player.name=$('#'+(i+1)+'_name').val();
+        player.allowedLosses=$('#'+(i+1)+'_defeats').val();
+        newChallengeObject.players.push(player);
         console.log(i);
 
     }
 
-    console.log(value);
-    console.log(playersData);
+    newChallengeObject.name=$('#challengeNameEntry').val();
+    newChallengeObject.table=$('#challengeTable').val();
+
+    challenges.push(newChallengeObject);
+    console.log(challenges);
+
+    console.log(newChallengeObject);
+
 
 }
 

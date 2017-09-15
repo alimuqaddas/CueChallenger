@@ -52,8 +52,8 @@ function getRandomInt(min, max) {
 function addPlayer(){
     //$('#playersAddField').add("<input type=\"text\" id=\""+playersInput+"_name\"style=\"display:inline-block\" placeholder=\"Player Name\"/>");
     //$('#playersAddField').add("<input type=\"text\" id=\""+playersInput+"_defeats\"style=\"display:inline-block\" placeholder=\"Allowed Defeats\"/>");
-    document.getElementById("playersAddField").innerHTML=document.getElementById("playersAddField").innerHTML+"<input type=\"text\" id=\""+playersInput+"_name\" placeholder=\"Player Name\" style=\"display:inline-block\"/>";
-    document.getElementById("playersAddField").innerHTML=document.getElementById("playersAddField").innerHTML+"<input type=\"text\" id=\""+playersInput+"_defeats\" placeholder=\"Allowed Defeats\" style=\"display:inline-block\"/>";
+    $("#playersAddField").append('<input type="text" id="'+playersInput+'_name" placeholder="Player Name" style="display:inline-block"/>');
+    $("#playersAddField").append('<input type="text" id="'+playersInput+'_defeats" placeholder="Allowed Defeats" style="display:inline-block"/>');
     playersInput++;
 }
 
